@@ -6,9 +6,6 @@ url = "https://reurl.cc/8jmDLM"
 html = requests.get(url)
 soup = BeautifulSoup(html.text, "lxml")
 
-# download album title
-title = soup.find("h1", class_ = "album-title flex-1")
-
 # make a POST request(XHR)
 url = "https://running.biji.co/index.php?pop=ajax&func=album&fename=load_more_photos_in_listing_computer"
 payload = {"type": "place", "rows": "0", "need_rows": "20",
